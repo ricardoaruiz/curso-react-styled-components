@@ -4,6 +4,11 @@ export const Icon = styled.img`
   height: 25px;
   width: 25px;
 `
+export const FilterIcon = styled(Icon)`
+  ${({ theme }) => css`
+    filter: ${theme.filter};
+  `};
+`
 
 export const Box = styled.div`
   ${({ theme }) => css`

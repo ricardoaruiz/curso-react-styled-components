@@ -6,14 +6,14 @@ import saude from '../assets/images/saude.svg'
 import transporte from '../assets/images/transporte.svg'
 import utilidades from '../assets/images/utilidades.svg'
 
-import { Icon } from '../Components/ui/index'
+import { FilterIcon } from '../Components/ui'
 
 const images = {
-  Restaurante: <Icon src={alimentacao} alt="restaurante" />,
-  Utilidade: <Icon src={utilidades} alt="utilidades" />,
-  Saude: <Icon src={saude} alt="saude" />,
-  Transporte: <Icon src={transporte} alt="transporte" />,
-  default: <Icon src={outros} alt="outros" />,
+  Restaurante: <FilterIcon src={alimentacao} alt="restaurante" />,
+  Utilidade: <FilterIcon src={utilidades} alt="utilidades" />,
+  Saude: <FilterIcon src={saude} alt="saude" />,
+  Transporte: <FilterIcon src={transporte} alt="transporte" />,
+  default: <FilterIcon src={outros} alt="outros" />,
 }
 
 export const imageFilter = (type) => {
