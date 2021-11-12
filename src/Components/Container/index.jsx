@@ -1,26 +1,31 @@
 import React from "react";
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import Titulo from "../Titulo";
 import Conta from "../Conta";
 import Extrato from "../Extrato";
 
 const Container = styled.div`
-  background-color: #f1f1f1;
-  min-height: 90vh;
-  padding: 0px 15vw;
+  ${({ theme }) => css`
+    background-color: ${theme.body};
+    min-height: 90vh;
+    padding: 0px 15vw;
 
-  @media (max-width: 800px) {
-    flex-direction: column;
-  }
+    @media (max-width: 800px) {
+      flex-direction: column;
+    }  
+  `};
 }
 
 `
 
 const Content = styled.section`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: ${theme.text};
+  `};
 `
 
 export default () => {

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Icon = styled.img`
   height: 25px;
@@ -6,19 +6,21 @@ export const Icon = styled.img`
 `
 
 export const Box = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.04);
-  padding: 20px;
-  width: 48%;
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: ${theme.inside};
+    border-radius: 5px;
+    box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.04);
+    padding: 20px;
+    width: 48%;
 
-  @media (max-width: 800px) {
-    width: 95%;
-    margin: 5px;
-  }
+    @media (max-width: 800px) {
+      width: 95%;
+      margin: 5px;
+    }  
+  `};
 `
 
 export const Button = styled.button`
