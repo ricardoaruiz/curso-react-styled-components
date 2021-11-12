@@ -1,5 +1,5 @@
 import React from "react";
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import bank_logo from "../../assets/images/bank_logo.svg";
 
 import * as variables from '../ui/variables'
@@ -18,17 +18,32 @@ const Logo = styled.img`
   width: 50px;
 `
 
+const Button = styled.a`
+  ${({ secondary = false }) => css`
+    text-align: center;
+    border-radius: 3px;
+    padding: 5px 20px;
+    margin: 0 10px;
+    font-weight: 600;
+    border: 2px solid white;
+
+    color: ${secondary ? variables.primaryColor : 'white'};
+    background: ${secondary ? 'white' : 'transparent'}
+  `}
+
+`
+
 const Cabecalho = () => {
   return (
     <StyledHeader>
       <Logo src={bank_logo} alt="Logo Smart Bank" />
       <div>
-        <a className="btn-secundario" href="https://google.com">
+        <Button href="https://google.com">
           Ajuda
-        </a>
-        <a className="btn-primario" href="https://google.com">
+        </Button>
+        <Button href="https://google.com" secondary>
           Sair
-        </a>
+        </Button>
       </div>
     </StyledHeader>
   );
