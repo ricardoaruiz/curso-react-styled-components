@@ -1,5 +1,6 @@
 import React from 'react'
 import { extratoLista } from '../../info'
+import { Items } from '../Items'
 
 import { Box, Button } from '../ui/index'
 
@@ -7,10 +8,7 @@ const Extrato = () => {
   return (
     <Box>
       {extratoLista.updates.map(({ id, type, from, value, date }) => (
-        <div key={id}>
-          <div>{type}</div>
-          <div>{from}</div>
-        </div>
+        <Items key={id} type={type} from={from} value={value} date={date} />
       ))}
       <Button>Ver mais</Button>
     </Box>
