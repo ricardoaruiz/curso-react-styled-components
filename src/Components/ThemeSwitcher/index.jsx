@@ -1,7 +1,7 @@
 import React from 'react'
 
-import themeOn from '../../assets/themeOn.svg';
-import themeOff from '../../assets/themeOff.svg';
+import themeOff from '../../assets/images/themeOff.svg';
+import themeOn from '../../assets/images/themeOn.svg';
 import { Icon } from '../ui'
 
 const light = <Icon src={themeOn} alt="Tema claro" />
